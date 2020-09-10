@@ -12,7 +12,8 @@ export default function Title({
                     <img src={logo} alt="Webbi logo" />
                 </div>
                 <div>
-                    <h5>Grow your business with a powerful image that speaks who you are and makes you visible.</h5>
+                    {/* <h5>We specialize in website design &amp; development</h5> */}
+                    <h5>Website Design &amp; Development <br/>in Nelson, New Zealand</h5>
                 </div>
             </div>
         </div>

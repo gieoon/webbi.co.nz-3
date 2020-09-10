@@ -3,10 +3,49 @@ $background-color: #f7efec;
 $anim-duration: 250ms;
 
 @media only screen and (max-width: 769px){
-    
+    p {
+        width: 95%;
+        margin: auto;
+    }
+
+    .FAQ {
+        .col {
+            max-width: initial!important;
+        }
+    }
+
+    .Contact {
+        p {
+            margin: auto!important;
+            width: fit-content!important;
+        }
+    }
+
+    .Footer-wrapper {
+        display: block!important;
+
+        .left, .right {
+            text-align: left!important;
+            display: block!important;
+        }
+
+        .social-wrapper {
+            margin: 2rem auto;
+
+            svg{
+                margin-left: 0!important;
+                margin-right: 2.5rem!important;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) {
+    p {
+        max-width: 550px;
+        margin: auto;
+    }
+
     .container {
         padding: 0 2rem;
     }

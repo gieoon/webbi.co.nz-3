@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import './checkbox.css';
 import './mobile.scss';
 import Header from './components/Header';
 import Title from './components/Title';
@@ -17,9 +18,9 @@ function App() {
       <Header />
       <Title />
       <Intro />
-      <Features />
       <Works />
       <About />
+      <Features />
       <FAQ />
       <Contact />
       <Footer />
