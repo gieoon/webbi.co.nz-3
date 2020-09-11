@@ -1,6 +1,6 @@
-$primary-color: #F55826; //#394EFF;
+$primary-color: #eb4614; //#F55826; //#394EFF;
 $background-color: #f7efec;
-$anim-duration: 250ms;
+$anim-duration: 125ms;
 
 @media only screen and (max-width: 768px){
     p {
@@ -200,6 +200,63 @@ $anim-duration: 250ms;
 }
 
 @media only screen and (max-width: 620px){
+    .Header {
+        .Header-wrapper{
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 99;
+            background-color: white;
+            box-shadow: 1px 1px 1px rgba(0,0,0,.15);
+        }
+
+        .logo {
+            height: 32px!important;
+            opacity: 1;
+            transition: all $anim-duration linear;
+        }
+
+        .hamburger-wrapper {
+            margin: auto .1rem;
+            z-index: 101;
+        }
+
+        .hamburger-overlay {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0px;
+            left: 0;
+            // background-color: rgba(255,255,255,.95);
+            background-color: white;
+            z-index: 100;
+            transform: translateY(-100vh);
+            transition: all $anim-duration ease-in;
+
+            &.show {
+                transform: translateY(48px);
+            }
+
+            .overlay-links-wrapper {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                height: 100%;
+
+                div {
+                    margin: 1.5rem auto;
+
+                    a {
+                        font-size: 2rem;
+                        text-decoration: none;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
     .Contact {
         input {
             width: initial!important;

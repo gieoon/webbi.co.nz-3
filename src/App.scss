@@ -50,24 +50,27 @@ h2 {
     color: $primary-color;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem .5rem 1rem;
     margin: 0;
 
-    .logo {
-        height: 56px;
-        // margin: .5rem 1rem;
-    }
-
-    .Links-wrapper {
-        display: flex;
-
-        div {
-            margin: 1rem;
+    .Header-wrapper{
+        padding: 1rem 2rem .5rem 1rem;
+    
+        .logo {
+            height: 56px;
+            // margin: .5rem 1rem;
         }
 
-        a {
-            text-decoration: none;
-            color: $primary-color;
+        .Links-wrapper {
+            display: flex;
+
+            div {
+                margin: 1rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+            }
         }
     }
 }
@@ -92,6 +95,7 @@ h2 {
     margin: 0 auto;
     padding: 3rem 0 3rem 0;
     flex-direction: column;
+    margin-top: 64px;
 
     .Title-wrapper {
         width: fit-content;
