@@ -9,7 +9,7 @@ export default function Header(){
     const [isMobile, setIsMobile] = useState(false);
 
     const handleHamburgerClicked = (e) => {
-        console.log('Hamburger clicked: ', document.getElementById('logo').opacity);
+        // console.log('Hamburger clicked: ', document.getElementById('logo').opacity);
         if(!hamburgerOpen){
             document.getElementById('logo').style.opacity = 0;
         } else {
