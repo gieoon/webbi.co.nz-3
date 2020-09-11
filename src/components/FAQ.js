@@ -14,7 +14,7 @@ export default function FAQ({
                             a="We typically spend one week on a custom website, but depending on the number of pages and your need for custom functionality, this timeframe may be extended."
                         />
                         <FAQObj 
-                            q="How do I update content?"
+                            q="How can I update the content?"
                             a="You can contact us and we'll do it immediately. We're currently also devising an exciting new system that lets you manage your content yourself without needing to contact anyone. We'll let you know when that's ready."
                         />
                         <FAQObj
@@ -23,9 +23,13 @@ export default function FAQ({
                          />
                     </div>
                     <div className="col">
-                        <FAQObj 
+                        {/* <FAQObj 
                             q="What if I need a completely new look?"
                             a="Typically businesses don't need a full overhaul, but if they do, we are able to negotiate a new rate based on the scale of the changes."
+                        /> */}
+                        <FAQObj
+                            q="How much do you cost?"
+                            a="Our pricing is competitive. We'll make sure to deliver quality at affordable and reasonable rates."
                         />
                         <FAQObj 
                             q="What do you use to build websites?"
