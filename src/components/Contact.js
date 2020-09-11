@@ -4,7 +4,7 @@ import unicorn from '../assets/unicorn.svg';
 export default function Contact({
 
 }){
-    const SERVER_ADDRESS = 'http://webbiconz-consulting.ts.r.appspot.com/index.php';//'http://localhost:9000/index.php';
+    const SERVER_ADDRESS = 'https://webbiconz-consulting.ts.r.appspot.com/index.php';//'http://localhost:9000/index.php';
 
     const [showing, setShowing] = useState(true);
 
