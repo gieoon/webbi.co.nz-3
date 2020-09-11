@@ -14,7 +14,7 @@ export default function FAQ({
                             a="We typically spend one week on a custom website, but depending on the number of pages and your need for custom functionality, this timeframe may be extended."
                         />
                         <FAQObj 
-                            q="How can I update the content?"
+                            q="How can I update content?"
                             a="You can contact us and we'll do it immediately. We're currently also devising an exciting new system that lets you manage your content yourself without needing to contact anyone. We'll let you know when that's ready."
                         />
                         <FAQObj
