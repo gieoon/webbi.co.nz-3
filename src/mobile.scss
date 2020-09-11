@@ -146,7 +146,7 @@ $anim-duration: 125ms;
 
         p {
             margin-left: auto!important;
-            width: fit-content!important;
+            width: fit-content;
         }
 
         input {
@@ -163,6 +163,17 @@ $anim-duration: 125ms;
             .CheckList-wrapper {
                 width: 50%;
                 margin: auto!important;
+            }
+        }
+
+        .confirmation-wrapper {
+            padding-right: 15px;
+            padding-left: 15px;
+            
+            p {
+                text-align: right;
+                width: 100%;
+                padding-right: 15px;
             }
         }
     }
@@ -226,13 +237,20 @@ $anim-duration: 125ms;
         
     }
 
+    #ourwork, #faq, #contact {
+        padding-top: 64px!important;
+    }
+
     .Contact {
+
+
         input {
-            width: initial!important;
+            width: 85%!important;
         }
 
         p {
-            margin: auto .5rem!important;
+            // margin: auto .5rem!important;    
+            width: 85%;
         }
 
         .CheckList {
