@@ -24,8 +24,8 @@ export default function Footer({
                         </div>
                         
                         <div>
-                            <Home />
-                            <small>34 Olympus Way, Richmond, Nelson, New Zealand, 7020</small>
+                            
+                            <small><Home />Richmond, Nelson, New Zealand, 7020</small>
                         </div>
                     </div>
                     {/* <div>

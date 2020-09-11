@@ -4,7 +4,9 @@ import unicorn from '../assets/unicorn.svg';
 export default function Contact({
 
 }){
-    const SERVER_ADDRESS = 'https://webbiconz-consulting.ts.r.appspot.com/index.php';//'http://localhost:9000/index.php';
+    const SERVER_ADDRESS = 
+        'https://webbiconz-consulting.ts.r.appspot.com/index.php';
+        // 'http://localhost:9000/index.php';
 
     const [showing, setShowing] = useState(true);
 
@@ -15,13 +17,20 @@ export default function Contact({
         console.log(formData);
         fetch(SERVER_ADDRESS, {
             method: 'post',
-            // mode: 'no-cors',
+            // mode: 'cors',
+            mode: 'no-cors',
             body: JSON.stringify(formData) 
-        }).then((res) => res.json())
+        }).then((res) => {
+            res.text();
+            // res.json()
+            setShowing(false);
+        })
         .then(d => {
             console.log("d: ", d)
-            setShowing(false);
-        });
+        })
+        .catch(err =>{
+            // console.error("Error sending cors");
+        })
 
         // var name = document.getElementById('name').value;
         // var email = document.getElementById('email').value;
@@ -39,8 +48,13 @@ export default function Contact({
             console.log(el);
             if(el.name !== "check_list")
                 out[el.name] = el.value;
-            else 
-                out[el.name].push(el.value);
+            else {
+                // console.log(el.checked)
+                if(el.checked)
+                    out[el.name].push(el.value);
+                
+            }
+                
             
         }
         return out;
@@ -82,7 +96,7 @@ function CheckList({
     return(
         <div className="checkbox-block CheckList">     
             <h4>How can we help?</h4>
-            <div>
+            <div className="CheckList-wrapper">
                 <label className="checkbox-wrapper">New website
                     <input type="checkbox" name="check_list" value="Website" />
                     <span className="checkmark"></span>

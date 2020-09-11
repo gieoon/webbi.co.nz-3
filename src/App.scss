@@ -312,16 +312,6 @@ h2 {
 
 .Features {
 
-    h2 {
-        color: $dark-header;
-        
-    }
-    h4 {
-        color: $dark-header;
-        font-weight: 400;
-        text-align: center;
-    }
-
     padding: 120px 0;
 
     .Features-wrapper {
@@ -341,6 +331,16 @@ h2 {
                 width: 5rem;
             }
         }
+    }
+
+    h2 {
+        color: $dark-header;
+        
+    }
+    h4 {
+        color: $dark-header;
+        font-weight: 400;
+        text-align: center;
     }
 
     h3 {
@@ -496,7 +496,6 @@ h2 {
             .social-wrapper {
                 display: flex;
                 margin-bottom: 0rem;
-                justify-content: flex-end;
 
                 .social svg {
                     // border-radius: 50%;

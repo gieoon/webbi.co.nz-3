@@ -38,7 +38,7 @@ export default function FAQ({
                     </div>
                 </div>
                 
-                <p>Couldn't find your answer? <a href="mailto:jun.a.kagaya@gmail.com">Email us</a> directly</p>
+                <p className="noanswer">Couldn't find your answer? <a href="mailto:jun.a.kagaya@gmail.com">Email us</a> directly.</p>
             </div>
         </div>
     )
