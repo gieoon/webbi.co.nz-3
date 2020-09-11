@@ -37,7 +37,8 @@ hr {
 }
 
 h2 {
-    margin: 2rem 0!important;
+    // margin: 2rem 0!important;
+    margin: 2rem auto!important;
     color: $primary-color;
     font-size: 2.25rem;
     box-sizing: border-box;
@@ -451,6 +452,28 @@ h2 {
 
         &:hover {
             opacity: 1;
+        }
+    }
+
+    .confirmation-wrapper {
+        padding-top: 82px;
+        text-align: center;
+        
+        img {
+            width: 6rem;
+            margin: auto;
+        }
+
+        h2 {
+            color: $primary-color;
+            max-width: 550px;
+            margin: auto;
+        }
+        
+        p {
+            text-align: right;
+            color: $primary-color;
+            // font-style: italic;
         }
     }
 }

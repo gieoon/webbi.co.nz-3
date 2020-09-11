@@ -23,7 +23,7 @@ export default function Features({
                             <p>How your site is perceived.</p>
                             <ul>
                                 <ListItem text="HTTPS/SSL secure" />
-                                <ListItem text="Connecting to a custom domain" />
+                                <ListItem text="Fully responsive for all screen sizes" />
                                 <ListItem text="Proximity hosting via NZ/AUS servers for rapid loading" />
                                 <ListItem text="SEO - Analytics of market segments and keywords" />
                             </ul>
@@ -37,6 +37,7 @@ export default function Features({
                             <p>Instantly relay your message</p>
                             <ul>
                                 <ListItem text="Enhanced UI/UX experience" />
+                                <ListItem text="Connected to custom domain" />
                                 <ListItem text="Easily update/remove content at any time" />
                                 <ListItem text="Compliant with modern web development standards" />
                             </ul>

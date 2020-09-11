@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
+import unicorn from '../assets/unicorn.svg';
 
 export default function Contact({
 
 }){
     const SERVER_ADDRESS = 'http://webbiconz-consulting.ts.r.appspot.com/index.php';//'http://localhost:9000/index.php';
+
+    const [showing, setShowing] = useState(true);
 
     const sendRequest = (e) => {
         e.preventDefault();
@@ -15,7 +18,10 @@ export default function Contact({
             // mode: 'no-cors',
             body: JSON.stringify(formData) 
         }).then((res) => res.json())
-        .then(d => console.log("d: ", d));
+        .then(d => {
+            console.log("d: ", d)
+            setShowing(false);
+        });
 
         // var name = document.getElementById('name').value;
         // var email = document.getElementById('email').value;
@@ -42,23 +48,30 @@ export default function Contact({
 
     return(
         <div id="contact" className="Contact">
-            <div className="container">
-                <form id="contactForm">
-                    <h2>Contact us</h2>
-                    <p>Let us know what you're after and receive an instant quote.</p>
+            { showing 
+                ? <div className="container">
+                    <form id="contactForm">
+                        <h2>Contact us</h2>
+                        <p>Let us know what you're after and receive an instant quote.</p>
 
-                    <input id="name" name="name" placeholder="Your name" />
-                    <input id="email" name="email" placeholder="Your email" />
-                    <input id="company" name="company" placeholder="Your company" />
-                    <input id="url" name="url" placeholder="Your website (if available)" />
+                        <input id="name" name="name" placeholder="Your name" />
+                        <input id="email" name="email" placeholder="Your email" />
+                        <input id="company" name="company" placeholder="Your company" />
+                        <input id="url" name="url" placeholder="Your website (if available)" />
 
-                    <CheckList />
+                        <CheckList />
 
-                    <div className="submit" onClick={(e)=>{sendRequest(e)}}>
-                        <div><button name="submit" type="submit">Submit</button></div>
-                    </div>
-                </form>
-            </div>
+                        <div className="submit" onClick={(e)=>{sendRequest(e)}}>
+                            <div><button name="submit" type="submit">Submit</button></div>
+                        </div>
+                    </form>
+                </div>
+                : <div className="confirmation-wrapper">
+                    <img src={unicorn} alt="Picture of unicorn with website" />
+                    <h2>Thanks, we will get back to you shortly.</h2>
+                    <p>- The Webbi Team</p>
+                </div>
+            }
         </div>
     )
 }
