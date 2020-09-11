@@ -212,6 +212,8 @@ $anim-duration: 125ms;
 
 @media only screen and (max-width: 620px){
     .Header {
+        width: 100vw!important;
+        
         .Header-wrapper{
             position: fixed;
             display: flex;
