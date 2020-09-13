@@ -14,7 +14,7 @@ export default function Contact({
         e.preventDefault();
         // console.log(e)
         var formData = form2Json(document.getElementById('contactForm'));
-        console.log(formData);
+        // console.log(formData);
         fetch(SERVER_ADDRESS, {
             method: 'post',
             // mode: 'cors',
@@ -26,7 +26,7 @@ export default function Contact({
             setShowing(false);
         })
         .then(d => {
-            console.log("d: ", d)
+            // console.log("d: ", d)
         })
         .catch(err =>{
             // console.error("Error sending cors");
@@ -42,10 +42,10 @@ export default function Contact({
     const form2Json = (element) => {
         const out = {"check_list": []};
         const inputs = element.getElementsByTagName("input");
-        console.log("inputs: ", inputs)
+        // console.log("inputs: ", inputs)
         for(var i=0;i<inputs.length;i++){
             var el = inputs[i];
-            console.log(el);
+            // console.log(el);
             if(el.name !== "check_list")
                 out[el.name] = el.value;
             else {
