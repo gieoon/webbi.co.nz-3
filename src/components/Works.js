@@ -22,7 +22,7 @@ export default function Works({
                 <ul>
                     {
                         WORKS.map((work, i) => (
-                            <Work 
+                            <Work key={"works-"+i}
                                 title={work.title}
                                 subtitle={work.subtitle}
                                 img={work.img}
