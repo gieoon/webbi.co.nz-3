@@ -121,6 +121,15 @@ $anim-duration: 125ms;
             box-shadow: none!important;
             padding: 0 1rem 5rem 1rem!important;
             margin-top: 0!important;
+
+            .Feature-wrapper {
+                flex-direction: column;
+                margin-top: 56px;
+    
+                img {
+                    margin: auto 32px;
+                }
+            }
         }
     }
 

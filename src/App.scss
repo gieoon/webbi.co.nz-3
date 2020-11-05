@@ -371,7 +371,7 @@ h2 {
             img {
                 width: 5rem;
                 height: 5rem;
-                margin: auto;
+                margin: auto 0;
             }
         }
     }
@@ -542,7 +542,7 @@ h2 {
 
                 .social svg {
                     // border-radius: 50%;
-                    height: 24px!important;
+                    height: 30px!important;
                     // width: 24px!important;
                     // background-color: white;
                     width: fit-content;

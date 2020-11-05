@@ -15,7 +15,7 @@ export default function Footer({
                         <div className="row">
                             <a href="mailto:jun.a.kagaya@gmail.com">
                                 <Send />
-                                <small>jun.a.kagaya@gmail.com</small>
+                                <small>hello@webbi.co.nz</small>
                             </a>
                         </div>
                         <div className="row">
