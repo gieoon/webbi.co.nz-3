@@ -94,7 +94,7 @@ const WORKS = [
     },
     {
         title: "Who Wrote This Text",
-        subtitle: "Can you discrern which text was written by a human?",
+        subtitle: "Can you discern which text was written by a human?",
         img: whowrotethistext,
         url: "https://whowrotethistext.com"
     }
