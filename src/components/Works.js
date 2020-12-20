@@ -17,7 +17,11 @@ export default function Works({
 
 }){
     return(
-        <div id="ourwork" className="Works">
+        <div 
+            //id="ourwork" 
+            className="Works">
+            <h2>More Works</h2>
+            <p className="works-subtitle">Websites in Social Media, Hospitality, Signup/Landing pages, Data Visualization, and AI.</p>
             <div className="container">
                 <ul>
                     {

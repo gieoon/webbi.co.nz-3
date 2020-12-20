@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import {Link, useRouteMatch} from 'react-router-dom';
 import logo from '../assets/logo_254.png';
 import HamburgerMenu from 'react-hamburger-menu';
 
@@ -7,6 +7,8 @@ export default function Header(){
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
     const [isMobile, setIsMobile] = useState(false);
+
+    let { url } = useRouteMatch();
 
     const handleHamburgerClicked = (e) => {
         // console.log('Hamburger clicked: ', document.getElementById('logo').opacity);
@@ -49,17 +51,19 @@ export default function Header(){
                     </div>
 
                     : <div className="Links-wrapper">
-                        <div><a href="#ourwork">Our Work</a></div>
-                        <div><a href="#about">About</a></div>
-                        <div><a href="#faq">FAQ</a></div>
-                        <div><a href="#contact">Contact</a></div>
+                        <div><a href={"/"}>Home</a></div>
+                        <div><a href={url+"#ourwork"}>Work</a></div>
+                        <div><a href={url+"#about"}>About</a></div>
+                        <div><a href={url+"#faq"}>FAQ</a></div>
+                        <div><a href={url+"#contact"}>Contact</a></div>
                     </div>
                 }
             </div>
             {/* Overlay menu */}
             <div className={"hamburger-overlay " + (hamburgerOpen ? "show" : "")}>
                 <div className="overlay-links-wrapper">
-                    <div><a href="#ourwork" onClick={()=>{handleHamburgerClicked()}}>Our Work</a></div>
+                    <div><a href={"/"}>Home</a></div>
+                    <div><a href="#ourwork" onClick={()=>{handleHamburgerClicked()}}>Work</a></div>
                     <div><a href="#about" onClick={()=>{handleHamburgerClicked()}}>About</a></div>
                     <div><a href="#faq" onClick={()=>{handleHamburgerClicked()}}>FAQ</a></div>
                     <div><a href="#contact" onClick={()=>{handleHamburgerClicked()}}>Contact</a></div>

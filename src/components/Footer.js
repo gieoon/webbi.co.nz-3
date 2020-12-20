@@ -1,14 +1,23 @@
 import React from 'react';
-
+import {Link, useRouteMatch} from 'react-router-dom';
 import { Tool, Edit3, Sun, Send, Phone, Home, Facebook, Linkedin } from 'react-feather';
 import logo from '../assets/white_254.png';
 
 export default function Footer({
 
 }){
+    let {url} = useRouteMatch();
+
     return (
         <footer className="Footer">
             <div className="container">
+                <div className="links-wrapper">
+                    <div><a href={"/"}>Home</a></div>
+                    <div><a href={url+"#ourwork"}>Work</a></div>
+                    <div><a href={url+"#about"}>About</a></div>
+                    <div><a href={url+"#faq"}>FAQ</a></div>
+                    <div><a href={url+"#contact"}>Contact</a></div>
+                </div>
                 <div className="Footer-wrapper">
                     <div className="left">
                         

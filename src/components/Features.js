@@ -12,8 +12,10 @@ export default function Features({
 }){
     return(
         <div className="Features">
-            <h2>Own an integrated solution</h2>
-            <h4>Different designs, copywriting, ease of use, security concerns, as well as plans for upscaling.</h4>
+            {/* <h2>Own an integrated solution</h2> */}
+            {/* <h2>We've thought of everything <br/>so that you don't need to</h2> */}
+            <h2>Everything you need to run a modern website</h2>
+            <h4>Diverse designs, succinct copywriting, ease of use, security concerns, as well as plans for upscaling.</h4>
             <div className="Features-wrapper">
                 <div className="container">
                     <div className="Feature-wrapper">

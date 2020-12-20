@@ -1,29 +1,39 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
 import './App.scss';
 import './checkbox.css';
 import './mobile.scss';
 import Header from './components/Header';
-import Title from './components/Title';
-import Intro from './components/Intro';
-import Features from './components/Features';
-import Works from './components/Works';
-import About from './components/About';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Homepage from './pages/Homepage';
+import Aboutpage from './pages/Aboutpage';
+import CaseStudypage from './pages/CaseStudypage';
+import ScrollTo from './components/ScrollTo';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Title />
-      <Intro />
-      <Works />
-      <About />
-      <Features />
-      <FAQ />
-      <Contact />
-      <Footer />
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/case-studies/:projectName">
+            <ScrollTo />
+            <CaseStudypage />
+          </Route>
+          <Route path="/about">
+            <Aboutpage />
+          </Route>
+          <Route path="/">
+            <ScrollTo />
+            <Homepage />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }

@@ -31,7 +31,8 @@ $anim-duration: 125ms;
         }
     }
 
-    .Works {
+    .Works,
+    .recent-works {
         width: calc(100% - 0.5rem);
         background-color: transparent!important;
         box-shadow: none!important;
@@ -58,7 +59,8 @@ $anim-duration: 125ms;
         }
     }
 
-    .Work {
+    .Work,
+    .recent-work {
         a {
             img {
                 // object-position: center!important;
@@ -134,8 +136,15 @@ $anim-duration: 125ms;
     }
 
     .FAQ {
-        .col {
-            max-width: 100%!important;
+        .row {
+            display: flex!important;
+            flex-wrap: wrap;
+            flex: 0 1 auto;
+            -webkit-box-direction: normal;
+            margin: auto;
+        }
+        // .col {
+            max-width: 80%!important;
 
             h5 {
                 padding: 0!important;
@@ -148,7 +157,7 @@ $anim-duration: 125ms;
                 width: fit-content!important;
                 margin: .5rem 0 2rem!important;
             }
-        }
+        // }
 
         .noanswer {
             a {
@@ -198,6 +207,10 @@ $anim-duration: 125ms;
     }
     .Footer {
         padding: 1rem 1rem;
+
+        .links-wrapper {
+            margin-bottom: 24px;
+        }
         
         .Footer-wrapper {
             display: block!important;
@@ -224,6 +237,46 @@ $anim-duration: 125ms;
                     margin-left: 0!important;
                     margin-right: 2.5rem!important;
                     width: initial!important;
+                }
+            }
+        }
+    }
+
+    .CaseStudypage {
+        padding-top: 3rem;
+
+        .before-after {
+
+            .header {
+                .before,
+                .after {
+                    display: none;
+                }
+            }
+    
+            .contents {
+                flex-wrap: wrap;
+
+                .before,
+                .after {
+                    display: block;
+                    background-color: #f7f8ff!important;
+                    margin: 0;
+                    width: 100%;
+                    font-weight: 600;
+                    letter-spacing: .5px;
+                }
+
+                div {
+                    width: 90%!important;
+                    min-width: 90%!important;
+                    max-width: 90%!important;
+                    height: 190px;
+                    margin-bottom: 24px; 
+
+                    &.blank:after {
+                        top: 55%;
+                    }
                 }
             }
         }
@@ -322,6 +375,38 @@ $anim-duration: 125ms;
             img {
                 height: 239px;
                 width: 100%;
+            }
+        }
+    }
+
+    .recent-works {
+
+        .recent-work {
+            max-width: 47.5%;
+        }
+
+        a {
+            margin: auto;
+            background-color: transparent!important;
+            // max-width: 20%;
+
+            img {
+                // height: 450px;
+                width: 100%;
+                // max-width: 720px;
+                // object-fit: ;
+                object-position: center;
+            }
+
+            .title {
+                font-size: 1.65rem!important;
+                margin-bottom: 6px;
+            }
+            .subtitle {
+                font-size: 1.1rem!important;
+                max-width: 620px;
+                margin: auto;
+                line-height: 1.5rem;
             }
         }
     }

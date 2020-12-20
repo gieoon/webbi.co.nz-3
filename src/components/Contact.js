@@ -65,9 +65,8 @@ export default function Contact({
             { showing 
                 ? <div className="container">
                     <form id="contactForm">
-                        <h2>Contact us</h2>
-                        <p>Let us know what you're after and receive an instant quote.</p>
-
+                        <h2>Contact us, we're friendly.</h2>
+                        <p>Let us know what you're after and receive a quote.</p>
                         <input id="name" name="name" placeholder="Your name" />
                         <input id="email" name="email" placeholder="Your email" />
                         <input id="company" name="company" placeholder="Your company" />
@@ -112,18 +111,23 @@ function CheckList({
                     <span className="checkmark"></span>
                 </label>
 
-                <label className="checkbox-wrapper">E-Commerce
+                <label className="checkbox-wrapper">E-Commerce / Selling products online
                     <input type="checkbox" name="check_list" value="E-Commerce"/>
                     <span className="checkmark"></span>
                 </label>
 
-                <label className="checkbox-wrapper">Shopify
+                {/* <label className="checkbox-wrapper">Shopify
                     <input type="checkbox" name="check_list" value="Shopify"/>
                     <span className="checkmark"></span>
-                </label>
+                </label> */}
 
-                <label className="checkbox-wrapper">Wordpress
+                {/* <label className="checkbox-wrapper">Wordpress
                     <input type="checkbox" name="check_list" value="Wordpress"/>
+                    <span className="checkmark"></span>
+                </label> */}
+
+                <label className="checkbox-wrapper">Blog
+                    <input type="checkbox" name="check_list" value="Blog"/>
                     <span className="checkmark"></span>
                 </label>
 

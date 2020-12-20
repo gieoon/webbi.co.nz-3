@@ -179,12 +179,45 @@ h2 {
     } 
 }
 
+.NewWorks {
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
+
+    .header-subtitle {
+        margin: auto;
+        text-align: center;
+        color: #32325d
+    }
+
+    .recent-works {
+        background: transparent!important;
+        box-shadow: none;
+        margin-top: 42px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .recent-work {
+            margin-bottom: 64px;
+            // margin-top: 42px;
+
+            img {
+                margin: auto;
+                margin-bottom: 12px;
+                // max-width: 860px;
+            }
+        }
+    }
+}
+
 .Works {
     width: calc(100% - 4rem);
     margin: 0 auto;
     padding: 1rem 0 0 0;
     background: white;
     box-shadow: 0 6px 12px -2px rgba(50,50,93,.25), 0 3px 7px -3px rgba(0,0,0,.3);
+    margin-top: 128px;
 
     ul {
         flex-wrap: wrap;
@@ -192,9 +225,15 @@ h2 {
         padding: 0;
 
     }
+
+    .works-subtitle {
+        color: #32325d;
+        margin-bottom: 24px;
+    }
 }
 
-.Work {
+.Work,
+.recent-work {
     a {
         transform: scale(.975);
         pointer-events: initial;
@@ -294,6 +333,10 @@ h2 {
     margin: 0 auto;
     padding: 0 0 5rem 0;
     box-shadow: 0 6px 12px -2px rgba(50,50,93,.25), 0 3px 7px -3px rgba(0,0,0,.3);
+
+    strong {
+        letter-spacing: .75px;
+    }
 }
 
 .FAQ {
@@ -307,16 +350,19 @@ h2 {
     }
 
     .row {
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
         -webkit-box-flex: 0;
         flex: 0 1 auto;
         -webkit-box-direction: normal;
         flex-direction: row;
         margin-right: 0;
         margin-left: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
-        .col {
+
+        // .col {
             max-width: 50%;
             flex-basis: 50%;
             -webkit-box-flex: 0;
@@ -341,11 +387,11 @@ h2 {
                 font-weight: 400;
                 line-height: 28px;
                 // padding: 0 20px 0 45px;
-                padding: 0 20px 0 75px;
+                padding: 0 20px 0 80px;
                 margin-bottom: 4rem;
                 text-align: left;
             }
-        }
+        // }
 
         
     }
@@ -525,7 +571,29 @@ h2 {
     // background-color: $background-color;
     padding: 3rem 0 3rem 0;
     
-    
+    .links-wrapper {
+        
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+
+        div {
+            margin-bottom: 12px;
+
+            a {
+                text-decoration: none;
+                text-align: left;
+                color: #525f7f;
+                transition: color 75ms ease;
+
+                &:hover {
+                    color: #eb4614;
+                }
+            }
+        }
+    }
 
     .Footer-wrapper {
         justify-content: space-between;
@@ -605,4 +673,101 @@ h2 {
     margin: 0 auto;
     flex-direction: column;
     display: flex;
+}
+
+.CaseStudypage {
+    margin-top: 56px;
+
+    .details {
+        p {
+            color: #32325d;
+        }
+
+        .visit-site-btn {
+            padding: 12px 24px;
+            background-color: #32325d;
+            border-radius: 4px;
+            transition: all 125ms ease;
+            cursor: pointer;
+            width: fit-content;
+            margin: auto;
+            margin-top: 64px;
+            margin-bottom: 128px;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+
+    .before-after {
+        margin: 64px auto;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            p {
+                color: #32325d;
+            }
+        }
+
+        .contents {
+            display: flex;
+            justify-content: center;
+
+            .before,
+            .after {
+                display: none;
+            }
+
+            div {
+                min-width: 50%;
+                max-width: 50%;
+                background-color: rgb(235,235,235);
+                position: relative;
+
+                &.blank:after {
+                    content: "There was no website";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    // bottom: 0;
+                    text-align: center;
+                    color: rgb(15,15,15);
+                    z-index: 1;
+                }
+                img {
+                    // max-width: 50%;
+                    object-fit: cover;
+                    width: 100%;
+                    z-index: 4;
+                }
+            }
+        }
+    }
+
+    .other-case-studies {
+        margin-bottom: 128px;
+
+        .link {
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                font-size: 1.2rem;
+                line-height: 35px;
+
+                &:hover {
+
+                }
+            }
+        }
+    }
 }
