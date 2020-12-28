@@ -63,21 +63,31 @@ export default function Contact({
     return(
         <div id="contact" className="Contact">
             { showing 
-                ? <div className="container">
-                    <form id="contactForm">
-                        <h2>Contact us, we're friendly.</h2>
-                        <p>Let us know what you're after and receive a quote.</p>
-                        <input id="name" name="name" placeholder="Your name" />
-                        <input id="email" name="email" placeholder="Your email" />
-                        <input id="company" name="company" placeholder="Your company" />
-                        <input id="url" name="url" placeholder="Your website (if available)" />
+                ? <div>
+                    <div className="container">
+                        <form id="contactForm">
+                            <h2>Contact us, we're friendly.</h2>
+                            <p>Let us know what you're after and receive a quote.</p>
+                            <input id="name" name="name" placeholder="Your name" />
+                            <input id="email" name="email" placeholder="Your email" />
+                            <input id="company" name="company" placeholder="Your company" />
+                            <input id="url" name="url" placeholder="Your website (if available)" />
 
-                        <CheckList />
+                            <CheckList />
 
-                        <div className="submit" onClick={(e)=>{sendRequest(e)}}>
-                            <div><button name="submit" type="submit">Submit</button></div>
+                            <div className="submit" onClick={(e)=>{sendRequest(e)}}>
+                                <div><button name="submit" type="submit">Submit</button></div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div className="additional">
+                        <h2>Or contact us directly</h2>
+                        <div>
+                            <p>Call Jun at: <a href="tel:0220910069">(+64) 0220910069</a></p>
+                            <p>Email us at: <a href="mailto:hello@webbi.co.nz">hello@webbi.co.nz</a></p>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 : <div className="confirmation-wrapper">
                     <img src={unicorn} alt="Picture of unicorn with website" />

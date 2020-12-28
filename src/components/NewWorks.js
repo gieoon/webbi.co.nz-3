@@ -9,12 +9,12 @@ export default function NewWorks({
 }){
     return(
         <div className="NewWorks" id="ourwork">
-            <h2>Case Studies</h2>
+            <h2>Recent work</h2>
             {/* <p className="header-subtitle">Some businesses in Nelson we helped.</p> */}
             <div className="recent-works">
                 {
                     NEW_WORKS.map((work, i) => (
-                        <div className="recent-work">
+                        <div className="recent-work" key={"new-work-"+i}>
                             <Link to={work.url}>
                             
                                 <img src={work.img} alt={work.title} className="thumbnail" />

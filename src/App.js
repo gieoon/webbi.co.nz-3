@@ -14,6 +14,11 @@ import Aboutpage from './pages/Aboutpage';
 import CaseStudypage from './pages/CaseStudypage';
 import ScrollTo from './components/ScrollTo';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-186189049-1'); // Only takes Google Universal Analytics Property, NOT Google 4 Properties
+ReactGA.pageview(window.location.pathname + window.location.search);
+console.log('Activated analytics');
+
 function App() {
   return (
     <div className="App">

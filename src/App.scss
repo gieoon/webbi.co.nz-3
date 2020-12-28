@@ -337,6 +337,37 @@ h2 {
     strong {
         letter-spacing: .75px;
     }
+
+    .minicontact {
+        hr {
+            border: 0.5px solid $primary-color;
+            height: 1px;
+            width: calc(100% - 2rem);
+            margin: 64px auto;
+        }
+
+        h2 {
+            font-size: 24px;
+            // text-align: left;
+            // max-width: 550px;
+        }
+
+        > div {
+            display: flex;
+            justify-content: center;
+
+            p {
+                width: fit-content;
+                margin: auto 24px;
+
+                a {
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: inherit;//#525f7f;
+                }
+            }
+        }
+    }
 }
 
 .FAQ {
@@ -360,7 +391,7 @@ h2 {
         margin-left: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+        column-gap: 12px;
 
         // .col {
             max-width: 50%;
@@ -375,7 +406,8 @@ h2 {
                 font-size: 19px;
                 font-weight: 500;
                 margin: 0 0 .3em;
-                padding: 0 45px;
+                // padding: 0 45px;
+                padding: 0 16px;
                 position: relative;
                 text-align: left;
                 white-space: nowrap;
@@ -387,7 +419,8 @@ h2 {
                 font-weight: 400;
                 line-height: 28px;
                 // padding: 0 20px 0 45px;
-                padding: 0 20px 0 80px;
+                // padding: 0 20px 0 80px;
+                padding: 0 20px 0 50px;
                 margin-bottom: 4rem;
                 text-align: left;
             }
@@ -478,91 +511,114 @@ h2 {
 }
 
 .Contact {
-    background-color: white;
-    width: calc(100% - 4rem);
-    margin: 0 auto 4rem;
-    padding: 0 0 5rem 0;
-    box-shadow: 0 6px 12px -2px rgba(50,50,93,.25), 0 3px 7px -3px rgba(0,0,0,.3);
-
-    h2 {
-        color: $dark-header;
-    }
-
-    p {
-        color: $dark;
-        margin-bottom: 1rem;
-        margin-left: 25%;
-    }
-
-    input {
-        width: 50%;
-        display: block;
-        margin: 8px auto;
-        font-size: 18px;
-        padding: 8px 12px;
-        color: $primary-color;
-        outline: none;
-        
-        // border-color: $primary-color;
-        border: none;
-        border-bottom: 2px solid $primary-color;
-        // background-color: $primary-color;
-    }
-
-    .CheckList {
-        margin-left: 25%;
-
-        h4 {
-            font-weight: 600;
-            margin-top: 2rem;
-        }
-
-        
-    }
-
-    button {
-        border: none;
-        background-color: transparent;
-        color: white;
-        font-weight: 600;
-        letter-spacing: .0725rem;
-        outline: none;
-        padding: 1rem;
-        cursor: pointer;
-    }
-
-    .submit {
-        margin: 4rem auto 1rem 25%;
-        width: fit-content;
-        background-color: $primary-color;
-        border-radius: 4px;
-        opacity: .85;
-        transition: all $anim-duration linear;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .confirmation-wrapper {
-        padding-top: 82px;
-        text-align: center;
-        
-        img {
-            width: 6rem;
-            margin: auto;
-        }
+    .container {
+        background-color: white;
+        width: calc(100% - 4rem);
+        margin: 0 auto 4rem;
+        padding: 0 0 5rem 0;
+        box-shadow: 0 6px 12px -2px rgba(50,50,93,.25), 0 3px 7px -3px rgba(0,0,0,.3);
 
         h2 {
-            color: $primary-color;
-            max-width: 550px;
-            margin: auto;
+            color: $dark-header;
         }
-        
+
         p {
-            text-align: right;
+            color: $dark;
+            margin-bottom: 1rem;
+            margin-left: 25%;
+        }
+
+        input {
+            width: 50%;
+            display: block;
+            margin: 8px auto;
+            font-size: 18px;
+            padding: 8px 12px;
             color: $primary-color;
-            // font-style: italic;
+            outline: none;
+            
+            // border-color: $primary-color;
+            border: none;
+            border-bottom: 2px solid $primary-color;
+            // background-color: $primary-color;
+        }
+
+        .CheckList {
+            margin-left: 25%;
+
+            h4 {
+                font-weight: 600;
+                margin-top: 2rem;
+            }
+
+            
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            color: white;
+            font-weight: 600;
+            letter-spacing: .0725rem;
+            outline: none;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        .submit {
+            margin: 4rem auto 1rem 25%;
+            width: fit-content;
+            background-color: $primary-color;
+            border-radius: 4px;
+            opacity: .85;
+            transition: all $anim-duration linear;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .confirmation-wrapper {
+            padding-top: 82px;
+            text-align: center;
+            
+            img {
+                width: 6rem;
+                margin: auto;
+            }
+
+            h2 {
+                color: $primary-color;
+                max-width: 550px;
+                margin: auto;
+            }
+            
+            p {
+                text-align: right;
+                color: $primary-color;
+                // font-style: italic;
+            }
+        }
+    }
+
+    .additional {
+        margin-bottom: 86px;
+
+         > div {
+            display: flex;
+            justify-content: center;
+
+            p {
+                color: #525f7f;
+                font-size: 18px;
+                margin: auto 12px;
+
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #525f7f;
+                }
+            }
         }
     }
 }

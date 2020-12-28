@@ -22,7 +22,7 @@ export default function Header(){
     }
 
     useEffect(()=>{
-        console.log(window.innerWidth);
+        // console.log(window.innerWidth);
         if(window.innerWidth < 620){
             setIsMobile(true);
             

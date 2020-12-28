@@ -20,7 +20,7 @@ export default function Works({
         <div 
             //id="ourwork" 
             className="Works">
-            <h2>More Works</h2>
+            <h2>More of our work</h2>
             <p className="works-subtitle">Websites in Social Media, Hospitality, Signup/Landing pages, Data Visualization, and AI.</p>
             <div className="container">
                 <ul>
