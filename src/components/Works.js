@@ -20,9 +20,10 @@ export default function Works({
         <div 
             //id="ourwork" 
             className="Works">
-            <h2>More of our work</h2>
-            <p className="works-subtitle">Websites in Social Media, Hospitality, Signup/Landing pages, Data Visualization, and AI.</p>
-            <div className="container">
+            <h2 className="title">More of our work</h2>
+            {/* <p className="works-subtitle">Websites in Social Media, Hospitality, Signup/Landing pages, Data Visualization, and AI.</p> */}
+            <p className="works-subtitle">We're comfortable making websites in a variety of verticals.</p>
+            <div className="container" id="TAG__visible_works">
                 <ul>
                     {
                         WORKS.map((work, i) => (

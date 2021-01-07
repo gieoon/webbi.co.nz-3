@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link, useRouteMatch} from 'react-router-dom';
 import logo from '../assets/logo_254.png';
 import HamburgerMenu from 'react-hamburger-menu';
+import {Send, Phone} from 'react-feather';
 
 export default function Header(){
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -14,8 +15,10 @@ export default function Header(){
         // console.log('Hamburger clicked: ', document.getElementById('logo').opacity);
         if(!hamburgerOpen){
             document.getElementById('logo').style.opacity = 0;
+            document.getElementById('header-contact-wrapper').style.opacity = 0;
         } else {
             document.getElementById('logo').style.opacity = 1;
+            document.getElementById('header-contact-wrapper').style.opacity = 1;
         }
         setHamburgerOpen(!hamburgerOpen);
         
@@ -35,6 +38,22 @@ export default function Header(){
                 <div>
                     <img id="logo" className="logo" src={logo} alt="Webbi's logo" />
                 </div>
+                {
+                    isMobile
+                    ? <div className="minicontact" id="header-contact-wrapper">
+                        <div className="row">
+                            <a href="mailto:jun.a.kagaya@gmail.com">
+                                <Send size={22}/>
+                                <small>hello@webbi.co.nz</small>
+                            </a>
+                        </div>
+                        <div className="row">
+                            <Phone size={22}/>
+                            <small>(+64) 022-091-0069</small>
+                        </div>
+                    </div>
+                    : <></>
+                }
                 { isMobile
                     ? <div className="hamburger-wrapper">
                         <HamburgerMenu

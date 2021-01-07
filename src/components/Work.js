@@ -9,7 +9,7 @@ export default function Work({
 }){
     return(
         <li className="Work">
-            <a href={workUrl} target="_blank" rel="noopener noreferrer">
+            <a href={workUrl} target="_blank" rel="noopener noreferrer" id="TAG__clicked_works">
                 <img src={img} alt={title} className="thumbnail" />
                 <div className="companylogo-wrapper">
                     {/* <img src={companyLogo} alt={title} className="companyLogo" /> */}

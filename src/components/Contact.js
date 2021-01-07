@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import unicorn from '../assets/unicorn.svg';
+import {GAevent} from '../analytics';
 
 export default function Contact({
 
@@ -9,8 +10,10 @@ export default function Contact({
         // 'http://localhost:9000/index.php';
 
     const [showing, setShowing] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     const sendRequest = (e) => {
+        setLoading(true);
         e.preventDefault();
         // console.log(e)
         var formData = form2Json(document.getElementById('contactForm'));
@@ -24,6 +27,7 @@ export default function Contact({
             res.text();
             // res.json()
             setShowing(false);
+            setLoading(false);
         })
         .then(d => {
             // console.log("d: ", d)
@@ -60,11 +64,20 @@ export default function Contact({
         return out;
     }
 
+    const Loader = () => {
+        return <div className="Loader">
+            <div className={"overlay " + (loading ? "showing" : "")}>
+                <div class="lds-ripple"><div></div><div></div></div>
+            </div>
+        </div>
+    }
+
     return(
         <div id="contact" className="Contact">
+            <Loader />
             { showing 
                 ? <div>
-                    <div className="container">
+                    <div className="container" id="TAG__visible_contact">
                         <form id="contactForm">
                             <h2>Contact us, we're friendly.</h2>
                             <p>Let us know what you're after and receive a quote.</p>
@@ -75,8 +88,11 @@ export default function Contact({
 
                             <CheckList />
 
-                            <div className="submit" onClick={(e)=>{sendRequest(e)}}>
-                                <div><button name="submit" type="submit">Submit</button></div>
+                            <div className="submit" onClick={(e)=>{
+                                GAevent('clicked', 'form-submit-pressed');
+                                sendRequest(e);
+                            }}>
+                                <div><button name="submit" id="TAG__submit" type="submit">Submit</button></div>
                             </div>
                         </form>
                     </div>

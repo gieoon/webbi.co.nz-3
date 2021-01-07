@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import bush_and_beyond from '../assets/works/bush_and_beyond.png';
 import bush_and_beyond_b4 from '../assets/works/bush_and_beyond_b4.png';
@@ -6,11 +6,16 @@ import historinz from '../assets/works/historinz.png';
 import historinz_b4 from '../assets/works/historinz_b4.png';
 import resolve from '../assets/works/resolve.png';
 import ScrollTo from '../components/ScrollTo';
+import {GApageView} from '../analytics';
 
 export default function CaseStudypage({
 
 }){
     const {projectName} = useParams();
+
+    useEffect(()=>{
+        GApageView("case-study/" + projectName);
+    }, []);
 
     const obj = LIVE_URLS[projectName];
     return(
@@ -44,7 +49,7 @@ export default function CaseStudypage({
                         <h2>More case studies</h2>
                         {
                             (Object.keys(LIVE_URLS).filter((k) => k !== projectName)).map((item, i) => (
-                                <div key={Date.now().toString()} className="link">
+                                <div key={"project-"+i} className="link">
                                     <a href={LIVE_URLS[item].localUrl}>{LIVE_URLS[item].projectName}</a>
                                 </div>
                             ))

@@ -14,8 +14,8 @@ export default function NewWorks({
             <div className="recent-works">
                 {
                     NEW_WORKS.map((work, i) => (
-                        <div className="recent-work" key={"new-work-"+i}>
-                            <Link to={work.url}>
+                        <div className="recent-work" key={"new-work-"+i} id="TAG__visible_recent-works">
+                            <Link to={work.url} id="TAG__clicked_recent-works">
                             
                                 <img src={work.img} alt={work.title} className="thumbnail" />
                                 <div className="companylogo-wrapper">

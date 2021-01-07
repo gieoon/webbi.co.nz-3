@@ -4,8 +4,35 @@ $anim-duration: 125ms;
 
 @media only screen and (max-width: 768px){
     p {
-        width: 95%;
+        // width: 95%;
         margin: auto;
+    }
+
+    h2 {
+        font-size: 1.5rem!important;
+    }
+
+    .Header {
+        .minicontact {
+            margin-top: -0.5rem;
+            
+            .row {
+                &:nth-child(1){
+                    margin-bottom: .25rem;
+                }            
+            }
+            a {
+                text-decoration: none;
+            }
+            svg {
+                margin-bottom: -6px;
+                color: $primary-color;
+                margin-right: 6px;
+            }
+            small {
+                color: $primary-color;
+            }
+        }
     }
 
     .Title {
@@ -31,9 +58,17 @@ $anim-duration: 125ms;
         }
     }
 
+    .NewWorks {
+        width: calc(100% - 2rem)!important;
+    }
+
+    .Works {
+        width: calc(100% - 2rem);
+    }
+
     .Works,
-    .recent-works {
-        width: calc(100% - 0.5rem);
+    .recent-works 
+    {
         background-color: transparent!important;
         box-shadow: none!important;
 
@@ -43,7 +78,8 @@ $anim-duration: 125ms;
 
         li {
             flex: 1 1 100%;
-            margin: 0 13px 2rem 13px;
+            // margin: 0 13px 2rem 13px;
+            margin: 0 0 2rem;
             width: 100%;
             cursor: pointer;
             transform: scale(1);
@@ -96,10 +132,20 @@ $anim-duration: 125ms;
     }
 
     .About {
-        width: calc(100% - 1rem)!important;
-        padding: 0 1rem 5rem 1rem!important;
+        width: calc(100% - 2rem)!important;
+        // padding: 0 1rem 5rem 1rem!important;
         background-color: transparent!important;
         box-shadow: none!important;
+
+        .minicontact {
+            > div {
+                flex-direction: column;
+                
+                p {
+                    margin: auto;
+                }
+            }
+        }
     }
 
     .Features {
@@ -110,18 +156,28 @@ $anim-duration: 125ms;
 
         h3 {
             margin-top: 24px;
+            margin-left:0!important;
         }
 
         h4 {
             padding: 0 1rem;
             // font-size: 1rem;
+            text-align: left!important;
+        }
+
+        p {
+            margin-left:0!important;
+        }
+
+        li {
+            padding-left: 0!important;
         }
 
         .Features-wrapper {
-            width: calc(100% - 0.5rem)!important;
+            width: calc(100% - 2rem)!important;
             background-color: transparent!important;
             box-shadow: none!important;
-            padding: 0 1rem 5rem 1rem!important;
+            // padding: 0 1rem 5rem 1rem!important;
             margin-top: 0!important;
 
             .Feature-wrapper {
@@ -129,22 +185,25 @@ $anim-duration: 125ms;
                 margin-top: 56px;
     
                 img {
-                    margin: auto 32px;
+                    margin: auto;//auto 32px;
                 }
             }
         }
     }
 
     .FAQ {
+        width: calc(100% - 2rem)!important;
+
         .row {
             display: flex!important;
             flex-wrap: wrap;
             flex: 0 1 auto;
             -webkit-box-direction: normal;
             margin: auto;
-        }
+            max-width: 100%!important;
+        // }
         // .col {
-            max-width: 80%!important;
+            
 
             h5 {
                 padding: 0!important;
@@ -157,7 +216,7 @@ $anim-duration: 125ms;
                 width: fit-content!important;
                 margin: .5rem 0 2rem!important;
             }
-        // }
+        }
 
         .noanswer {
             a {
@@ -167,14 +226,19 @@ $anim-duration: 125ms;
     }
 
     .Contact {
-        width: calc(100% - 0.5rem);
+        width: calc(100% - 2rem);
         background-color: transparent!important;
         box-shadow: none!important;
         padding: 0!important;
+        margin: auto;
 
         p {
             margin-left: auto!important;
             width: fit-content;
+        }
+
+        .container {
+            width: 100%!important;
         }
 
         input {
@@ -204,9 +268,19 @@ $anim-duration: 125ms;
                 padding-right: 15px;
             }
         }
+
+        .additional {
+            > div {
+                flex-direction: column;
+            }
+        }
     }
     .Footer {
-        padding: 1rem 1rem;
+        padding: 2rem 1rem 1rem;
+        background-color: white;
+        border-top: 2px solid $primary-color;
+        // border-bottom: 2px solid $primary-color;
+        // background-color: $primary-color;
 
         .links-wrapper {
             margin-bottom: 24px;
@@ -244,6 +318,8 @@ $anim-duration: 125ms;
 
     .CaseStudypage {
         padding-top: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
 
         .before-after {
 
@@ -268,11 +344,18 @@ $anim-duration: 125ms;
                 }
 
                 div {
-                    width: 90%!important;
-                    min-width: 90%!important;
-                    max-width: 90%!important;
+                    // width: 90%!important;
+                    min-width: 100%!important;
+                    // max-width: 90%!important;
                     height: 190px;
-                    margin-bottom: 24px; 
+
+                    &:not(.blank) {
+                        margin-bottom: 24px; 
+                    }
+
+                    &:nth-child(2) {
+                        margin-top: 24px;
+                    }
 
                     &.blank:after {
                         top: 55%;
@@ -356,7 +439,19 @@ $anim-duration: 125ms;
         padding: 0 2rem;
     }
 
+    .Header {
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .NewWorks {
+        max-width: 860px;
+        margin-top: 156px;
+    }
+
     .Works {
+        max-width: 860px;
+
         ul {
             margin: 1rem 0;
         }
@@ -377,6 +472,14 @@ $anim-duration: 125ms;
                 width: 100%;
             }
         }
+    }
+
+    .Features-wrapper {
+        max-width: 860px;
+    }
+
+    #about {
+        max-width: 860px;
     }
 
     .recent-works {
